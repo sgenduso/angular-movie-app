@@ -1,0 +1,4 @@
+  <div ng-repeat='movie in movies track by $index'>
+    <a href='/{{movie.imdbID}}/show'>{{movie.Title}}</a>
+    <p>year:  {{movie.Year}}</p>
+  </div>

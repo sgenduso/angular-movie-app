@@ -2,11 +2,14 @@ var app = angular.module("movies", ['ngRoute']);
 
 app.config(function ($routeProvider, $locationProvider) {
   $routeProvider
-    .when('/', {
-      templateUrl: 'partials/home.html',
+    .when('/:movie', {
+      templateUrl: 'partials/searchResults.html',
       controller: 'HomeController'
+    })
+    .when('/:id/show', {
+      templateUrl:'partials/movie.html',
+      controller: 'MovieController'
     });
 
     $locationProvider.html5Mode(true);
-    // .when('')
 });
